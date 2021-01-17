@@ -18,7 +18,7 @@ Vue.use(Auth0Plugin, {
     router.push(
       appState && appState.targetUrl
         ? appState.targetUrl
-        : window.location.pathname
+        : 'http://localhost:8080/home/'
     )
   }
 })

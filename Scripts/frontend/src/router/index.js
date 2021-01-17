@@ -1,16 +1,15 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Router from 'vue-router'
+import Home from '@/components/Home'
 import { authGuard } from '../auth/authGuard'
-Vue.use(VueRouter)
+Vue.use(Router)
 
-export default new VueRouter({
+export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
-      beforeEnter: authGuard
+      path: '/home',
+      name: 'Home',
+      component: Home
     }
   ]
 })
